@@ -1,4 +1,111 @@
-﻿body {
+﻿* {
+  font-family: Helvetica Neue;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  font-size: 20px;
+}
+
+#archives{
+  padding:0;
+}
+
+#archives img{
+  width:19%;
+}
+
+li.archive{
+  list-style-type: none;
+  display:inline;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+  background-color: #72AC93;
+}
+
+#locations .location{
+  list-style-type: none;
+  width: 45%;
+  float: left;
+  margin: 8px;
+  padding: 8px;
+  min-width: 405px;
+}
+
+#locations figure{
+  float:left;
+  padding:0 8px 2px 0
+}
+#locations figure img{
+  margin-top: 12px
+}
+
+@media screen and (max-width: 1095px) {
+  #locations .location {
+    width: 100%;
+  }
+}
+
+.border {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 5px solid #fff;
+  background: #fff;
+  -webkit-transform: translatez(0);
+}
+
+a:hover{
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+a.button{
+  color: white;
+  text-decoration: none;
+  background-color: #699E87;
+  padding:5px 20px;
+  bottom: 10px;
+  left: 75%;
+  position: absolute;
+  font-weight: bold;
+  box-shadow: 0 0 5px #72AC93;
+  border: 3px solid #72AC93;
+  font-size: 20px;
+}
+
+a.button:hover{
+  background-color:#72AC93;
+  color: black;
+}
+
+#shows li{
+  width:45%;
+  float: left;
+  padding:10px;
+  margin: 10px;
+  height: 500px;
+}
+
+li.show {
+  min-width: 495px;
+}
+
+#shows img{
+  width: 50%;
+  float: left;
+  padding: 10px
+}
+
+@media screen and (max-width: 1185px) {
+  
+  #shows li{
+    width: 100%;
+  }
+}
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<UVM.Theatre.Domain.Models.Show>
+
+@{
+  ViewBag.Title = "title";
+}
+
+<h2>Archives</h2>
+@{
+  int n = 0;
+}
+<ul id="archives">
+@while (n++ < 6)
+{
+  
+     foreach (var location in @Model)
+     {
+       <li class="archive">
+         <a href="@location.ShowId"><img class="border" src="@location.Image" /></a>
+       </li>
+     }
+}
+</ul>

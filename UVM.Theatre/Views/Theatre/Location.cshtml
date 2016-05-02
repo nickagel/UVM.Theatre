@@ -1,0 +1,25 @@
+﻿@model IEnumerable<UVM.Theatre.Domain.Models.Location>
+
+@{
+  ViewBag.Title = "title";
+}
+
+<h2>Location</h2>
+<section id="locations">
+  <ol>
+    @foreach (var location in @Model)
+    {
+      <li class="location border">
+        <h1>@location.Title</h1>
+        <figure>
+          <iframe src="@location.GoogleMap" width="250" height="150" allowfullscreen class="border"></iframe>
+          <br/>
+          <img class="border" width="250" height="150" src="@location.ImageUrl" />
+        </figure>
+        <p>
+          @location.Description
+        </p>
+      </li>
+    }
+  </ol>
+</section>

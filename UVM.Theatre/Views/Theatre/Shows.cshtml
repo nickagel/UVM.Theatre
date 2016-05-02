@@ -1,0 +1,25 @@
+﻿@model IEnumerable<UVM.Theatre.Domain.Models.Show>
+
+@{
+  ViewBag.Title = "title";
+}
+
+<h2>Shows</h2>
+<section id="shows">
+  <ol>
+    @foreach (var show in @Model)
+    {
+      <li class="show border">
+        <img src="@show.Image" />
+        <h1>@show.Title</h1>
+        <h2>@show.SubTitle</h2>
+        <p>
+          @show.Director <br/>
+          @show.ShowDates <br/>
+          @show.Description.Substring(0, 400)...<a href="@show.ShowId">(more)</a>
+        </p>
+        <a class="button" href="@show.ShowId">Tickets</a>
+      </li>
+    }
+  </ol>
+</section>
