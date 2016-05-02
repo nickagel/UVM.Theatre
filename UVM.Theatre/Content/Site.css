@@ -6,6 +6,20 @@
   font-size: 20px;
 }
 
+.nav, .navbar-inverse .navbar-nav > li > a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-collapse, .navbar-inverse {
+    background: rgb(30, 130, 76);
+}
+
+.navbar-inverse {
+    border-bottom: solid 2px #72AC93;
+}
+
 #archives{
   padding:0;
 }
@@ -128,4 +142,35 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+footer p {
+    clear: both;
+}
+
+ol.mini.border {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+ol.mini {
+    margin-top: 30px;
+}
+
+ol.mini.border li{
+    display: inline-block;
+}
+
+img.img {
+    margin: 0;
+    width: 279px;
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: relative !important;
+    bottom: -30px;
+    width: 100%;
+    margin-top: -30px;
+    padding: 10px;
 }

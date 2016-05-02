@@ -390,7 +390,8 @@ hr {
 }
 
 .sr-only {
-  position: absolute;
+  position: 
+      ;
   width: 1px;
   height: 1px;
   padding: 0;
