@@ -287,10 +287,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Theatre\Archive.cshtml" />
+    <Content Include="Views\Theatre\index.cshtml" />
+    <Content Include="Views\Theatre\Location.cshtml" />
+    <Content Include="Views\Theatre\Show.cshtml" />
+    <Content Include="Views\Theatre\Shows.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Theatre\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

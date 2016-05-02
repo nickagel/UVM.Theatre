@@ -5,35 +5,33 @@ using UVM.Theatre.Domain.Models;
 
 namespace UVM.Theatre.Repositories
 {
-    public class ShowRepository : IShowRepository
+    public class LocationsRepository : ILocationsRepository
     {
-        public IEnumerable<Show> GetCurrentShows()
+        public IEnumerable<Location> GetLocations()
         {
             const string connStr = "server=localhost;user=root;database=theatre;port=3306;password=abc123;";
             var conn = new MySqlConnection(connStr);
-            var shows = new List<Show>();
+            var locations = new List<Location>();
             try
             {
                 conn.Open();
 
-                const string sql = "SELECT * FROM theatre.show where archive = 0;";
+                const string sql = "SELECT * FROM theatre.location;";
                 var cmd = new MySqlCommand(sql, conn);
                 var rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    var show = new Show
+                    var location = new Location
                     {
-                        ShowId = Convert.ToInt32(rdr[0]),
+                        LocationId = Convert.ToInt32(rdr[0]),
                         Title = rdr[1].ToString(),
-                        SubTitle = rdr[2].ToString(),
-                        Director = rdr[3].ToString(),
-                        ShowDates = rdr[4].ToString(),
-                        Description = rdr[5].ToString(),
-                        Image = rdr[6].ToString()
+                        ImageUrl = rdr[2].ToString(),
+                        GoogleMap = rdr[3].ToString(),
+                        Description = rdr[4].ToString()
 
                     };
-                    shows.Add(show);
+                    locations.Add(location);
                 }
                 rdr.Close();
             }
@@ -42,7 +40,7 @@ namespace UVM.Theatre.Repositories
                 Console.WriteLine(ex.ToString());
             }
             conn.Close();
-            return shows;
+            return locations;
         }
     }
 }

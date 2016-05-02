@@ -62,8 +62,12 @@ namespace UVM.Theatre
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<ILocationsRepository>().To<LocationsRepository>();
             kernel.Bind<IShowRepository>().To<ShowRepository>();
+
+
             kernel.Bind<IShowService>().To<ShowService>();
+            kernel.Bind<ILocationsService>().To<LocationsService>();
         }        
     }
 }
