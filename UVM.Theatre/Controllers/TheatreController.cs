@@ -39,6 +39,15 @@ namespace UVM.Theatre.Controllers
             return View(shows);
         }
 
+        public ActionResult ArhivedShow()
+        {
+            var url = HttpContext.Request.Url;
+            if (url == null) return null;
+            var id = Convert.ToInt32(url.Segments[3]);
+            var show = _showService.GetShowById(id);
+            return View(show);
+        }
+
         public ActionResult Show()
         {
             var url = HttpContext.Request.Url;

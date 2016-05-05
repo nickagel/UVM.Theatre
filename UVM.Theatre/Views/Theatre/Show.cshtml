@@ -1,11 +1,29 @@
 ﻿@model UVM.Theatre.Domain.Models.Show
+
+@{
+    var listItems = new List<SelectListItem>();
+    foreach (var date in @Model.Dates)
+    {
+        var dateTime = date.Date.Substring(0, date.Date.Length - 11);
+        dateTime += DateTime.Parse(date.Time).ToString("hh:mm");
+        var value = date.DateId.ToString();
+
+        listItems.Add(new SelectListItem {
+            Text = dateTime,
+            Value = value
+        });
+    }
+
+}
+
 <section id="show" class="border">
     <img src="@Model.Image" alt="@Model.Title"/>
     <h1>@Model.Title</h1>
     <h2>@Model.SubTitle</h2>
     <p>
-        @Model.Director <br />
-        @Model.ShowDates <br />
+        @Model.Director <br/>
+        @Model.ShowDates <br/>
         @Model.Description
     </p>
+    @Html.DropDownList("test", listItems, new {@class= "bfh-selectbox"})
 </section>

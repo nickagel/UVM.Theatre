@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+
 namespace UVM.Theatre.Domain.Models
 {
     public class Show : IEnumerable
@@ -18,6 +20,7 @@ namespace UVM.Theatre.Domain.Models
         public bool Archive { get; set; }
 
         public string Image { get; set; }
+        public List<DateTime> Dates { get; set; }
 
         public IEnumerator GetEnumerator()
         {

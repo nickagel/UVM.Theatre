@@ -1,4 +1,5 @@
-﻿@model IEnumerable<UVM.Theatre.Domain.Models.Show>
+﻿@using System.Web.UI.WebControls
+@model IEnumerable<UVM.Theatre.Domain.Models.Show>
 
 @{
   ViewBag.Title = "title";
@@ -12,10 +13,11 @@
 @while (n++ < 6)
 {
   
-     foreach (var location in @Model)
+     foreach (var show in @Model)
      {
        <li class="archive">
-         <a href="@location.ShowId"><img class="border" src="@location.Image" /></a>
+           <a href='@($"/Theatre/ArhivedShow/{@show.ShowId}")'><img class="border" src="@show.Image"/></a>
+         
        </li>
      }
 }

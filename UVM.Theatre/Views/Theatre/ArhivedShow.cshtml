@@ -1,0 +1,12 @@
+﻿@model UVM.Theatre.Domain.Models.Show
+
+<section id="show" class="border">
+    <img src="@Model.Image" alt="@Model.Title" />
+    <h1>@Model.Title</h1>
+    <h2>@Model.SubTitle</h2>
+    <p>
+        @Model.Director <br />
+        @Model.ShowDates <br />
+        @Model.Description
+    </p>
+</section>

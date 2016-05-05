@@ -13,12 +13,14 @@
           <img src="@show.Image" alt="@show.Title"/>
           <h1>@show.Title</h1>
         <h2>@show.SubTitle</h2>
-        <p>
-          @show.Director <br/>
-          @show.ShowDates <br/>
-          @show.Description.Substring(0, 400)... @Html.ActionLink("(more)", "Show", new {Id=@show.ShowId} )
-        </p>
-          @Html.ActionLink("Tickets", "Show", new { Id = @show.ShowId}, new {@class="button"})
+          <p>
+              @show.Director <br/>
+              @show.ShowDates <br/>
+              @show.Description.Substring(0, 400)... @Html.ActionLink("(more)", "Show", new {Id = @show.ShowId})
+          </p>
+          <div class ="button-wrapper">
+              @Html.ActionLink("Tickets", "Show", new { Id = @show.ShowId }, new { @class = "button" })
+          </div>
       </li>
     }
   </ol>
