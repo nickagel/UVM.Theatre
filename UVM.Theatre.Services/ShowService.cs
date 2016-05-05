@@ -17,5 +17,10 @@ namespace UVM.Theatre.Services
             return _showRepository.GetCurrentShows();
         }
 
+        public Show GetShowById(int id)
+        {
+            return _showRepository.GetShowById(id);
+        }
+
     }
 }

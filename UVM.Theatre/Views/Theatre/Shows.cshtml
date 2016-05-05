@@ -10,15 +10,15 @@
     @foreach (var show in @Model)
     {
       <li class="show border">
-        <img src="@show.Image" />
-        <h1>@show.Title</h1>
+          <img src="@show.Image" alt="@show.Title"/>
+          <h1>@show.Title</h1>
         <h2>@show.SubTitle</h2>
         <p>
           @show.Director <br/>
           @show.ShowDates <br/>
-          @show.Description.Substring(0, 400)...<a href="@show.ShowId">(more)</a>
+          @show.Description.Substring(0, 400)... @Html.ActionLink("(more)", "Show", new {Id=@show.ShowId} )
         </p>
-        <a class="button" href="@show.ShowId">Tickets</a>
+          @Html.ActionLink("Tickets", "Show", new { Id = @show.ShowId}, new {@class="button"})
       </li>
     }
   </ol>

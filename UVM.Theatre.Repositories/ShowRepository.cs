@@ -44,5 +44,42 @@ namespace UVM.Theatre.Repositories
             conn.Close();
             return shows;
         }
+
+        public Show GetShowById(int id)
+        {
+            const string connStr = "server=localhost;user=root;database=theatre;port=3306;password=abc123;";
+            var conn = new MySqlConnection(connStr);
+            Show show = null;
+            try
+            {
+                conn.Open();
+
+                var sql = "SELECT * FROM theatre.show WHERE archive = 0 AND showId =" + id + ";";
+                var cmd = new MySqlCommand(sql, conn);
+                var rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    show = new Show
+                    {
+                        ShowId = Convert.ToInt32(rdr[0]),
+                        Title = rdr[1].ToString(),
+                        SubTitle = rdr[2].ToString(),
+                        Director = rdr[3].ToString(),
+                        ShowDates = rdr[4].ToString(),
+                        Description = rdr[5].ToString(),
+                        Image = rdr[6].ToString()
+
+                    };
+                }
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            conn.Close();
+            return show;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using UVM.Theatre.Services;
 
 namespace UVM.Theatre.Controllers
@@ -40,8 +41,11 @@ namespace UVM.Theatre.Controllers
 
         public ActionResult Show()
         {
-            var shows = _showService.GetAllActiveShows();
-            return View(shows);
+            var url = HttpContext.Request.Url;
+            if (url == null) return null;
+            var id = Convert.ToInt32(url.Segments[3]);
+            var show = _showService.GetShowById(id);
+            return View(show);
         }
     }
 }

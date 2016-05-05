@@ -6,5 +6,7 @@ namespace UVM.Theatre.Services
     public interface IShowService
     {
         IEnumerable<Show> GetAllActiveShows();
+
+        Show GetShowById(int id);
     }
 }
