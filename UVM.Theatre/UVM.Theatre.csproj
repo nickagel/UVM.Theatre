@@ -240,6 +240,7 @@
     <Content Include="Content\Images\Banner\160222_UVM_NoisesOff_0058.jpg" />
     <Content Include="Content\Images\Banner\160222_UVM_NoisesOff_0572.jpg" />
     <Content Include="Content\Images\Banner\160222_UVM_NoisesOff_2040.jpg" />
+    <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\Shows\Poster\AGrandNightforSinging.jpg" />
     <Content Include="Content\Images\facebook.jpg" />
     <Content Include="Content\Images\Shows\Poster\HowILearnedtoDrive.jpg" />
