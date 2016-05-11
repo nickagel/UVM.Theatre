@@ -1,0 +1,1 @@
+﻿$(function () { var n = $("#pull"); menu = $("nav ul"), $(n).on("click", function (n) { n.preventDefault(), menu.slideToggle() }), $(window).resize(function () { var n = $(window).width(); n > 320 && menu.is(":hidden") && menu.removeAttr("style") }) });

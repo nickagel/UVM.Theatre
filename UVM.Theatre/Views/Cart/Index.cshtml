@@ -1,0 +1,60 @@
+﻿@model UVM.Theatre.Models.CartIndex
+
+<style>
+    #cartTable td {
+        vertical-align: middle;
+    }
+</style>
+    <h2>Your cart</h2>
+    <table id="cartTable" class="table">
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Item</th>
+                <th class="text-right">Price</th>
+                <th class="text-right">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.Cart.Lines)
+            {
+                <tr>
+                    <td>@line.SeniorQuantity</td>
+                    <td>@line.RegularQuantity</td>
+                    <td>@line.StudentQuantity</td>
+                    <td>@line.Show.Title</td>
+                <td>@line.Show.SeniorPrice</td>
+                <td>@line.Show.RegularPrice</td>
+                <td>@line.Show.StudentPrice</td>
+                <td>
+                    @((line.SeniorQuantity * line.Show.SeniorPrice + line.RegularQuantity * line.Show.RegularPrice + line.StudentQuantity * line.Show.StudentPrice).ToString("c"))
+                </td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                        @Html.Hidden("ProductId", line.Show.Date)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input class="btn btn-sm btn-warning"
+                               type="submit" value="Remove" />
+                    }
+                </td>
+            </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Total:</td>
+                <td class="text-right">
+                    @Model.Cart.ComputeTotalValue().ToString("c")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-center">
+        <a class="btn btn-primary" href="@Model.ReturnUrl">Continue shopping</a>
+        @Html.ActionLink("Checkout now", "Checkout", null, new { @class = "btn btn-primary" })
+    </div>
+
+
+

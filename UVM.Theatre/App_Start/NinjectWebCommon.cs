@@ -14,7 +14,7 @@ namespace UVM.Theatre
 {
     public static class NinjectWebCommon 
     {
-        private static readonly Bootstrapper bootstrapper = new Bootstrapper();
+        private static readonly Bootstrapper Bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
@@ -23,7 +23,7 @@ namespace UVM.Theatre
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(CreateKernel);
+            Bootstrapper.Initialize(CreateKernel);
         }
         
         /// <summary>
@@ -31,7 +31,7 @@ namespace UVM.Theatre
         /// </summary>
         public static void Stop()
         {
-            bootstrapper.ShutDown();
+            Bootstrapper.ShutDown();
         }
         
         /// <summary>
@@ -62,12 +62,15 @@ namespace UVM.Theatre
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            if (kernel == null) throw new ArgumentNullException(nameof(kernel));
             kernel.Bind<ILocationsRepository>().To<LocationsRepository>();
             kernel.Bind<IShowRepository>().To<ShowRepository>();
 
 
             kernel.Bind<IShowService>().To<ShowService>();
             kernel.Bind<ILocationsService>().To<LocationsService>();
+
+            kernel.Bind<IOrderProcessorService>().To<OrderProcessorService.EmailOrderProcessor>();
         }        
     }
 }

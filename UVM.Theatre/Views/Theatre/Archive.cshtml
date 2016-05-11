@@ -1,14 +1,10 @@
-﻿@using System.Web.UI.WebControls
-@model IEnumerable<UVM.Theatre.Domain.Models.Show>
+﻿@model IEnumerable<UVM.Theatre.Domain.Models.Show>
 
 @{
-  ViewBag.Title = "title";
+  ViewBag.Title = "Arhives";
+  var n = 0;
 }
 
-<h2>Archives</h2>
-@{
-  int n = 0;
-}
 <ul id="archives">
 @while (n++ < 6)
 {

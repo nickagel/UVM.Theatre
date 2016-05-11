@@ -24,17 +24,20 @@ namespace UVM.Theatre.Controllers
         public ActionResult Shows()
         {
             var shows = _showService.GetAllActiveShows();
+            ViewBag.Show = "active";
             return View(shows);
         }
 
         public ActionResult Location()
         {
             var locations = _locationsService.GetLocations();
+            ViewBag.Location = "active";
             return View(locations);
         }
 
         public ActionResult Archive()
         {
+            ViewBag.Archive = "active";
             var shows = _showService.GetAllActiveShows();
             return View(shows);
         }

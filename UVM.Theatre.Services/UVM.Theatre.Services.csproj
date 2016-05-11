@@ -116,8 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ILocationsService.cs" />
+    <Compile Include="IOrderProcessorService.cs" />
     <Compile Include="LocationsService.cs" />
     <Compile Include="IShowService.cs" />
+    <Compile Include="OrderProcessorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowService.cs" />
   </ItemGroup>
