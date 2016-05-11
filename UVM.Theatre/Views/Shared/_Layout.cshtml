@@ -6,7 +6,6 @@
     <title>@ViewBag.Title - UVM Department of Theatre</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href=""/>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
@@ -17,10 +16,10 @@
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <a href="./"><img id="logo" src="../../Content/Images/logo.png" alt="UVM Theatre"></a>
+        <a href="/Theatre/Index"><img id="logo" src="../../Content/Images/logo.png" alt="UVM Theatre"></a>
         <nav class="clearfix">
             <ul class="clearfix">
-                <li id="home"><a href="/">Home</a></li>
+                <li id="home"><a href="/Theatre/Index">Home</a></li>
                 <li><a class="@ViewBag.Show" href="/Shows">Shows</a></li>
                 <li><a class="@ViewBag.Location" href="/Location">Location</a></li>
                 <li><a class="@ViewBag.Archive" href="/Archive">Archives</a></li>

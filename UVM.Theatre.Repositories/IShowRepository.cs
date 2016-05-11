@@ -5,8 +5,8 @@ namespace UVM.Theatre.Repositories
 {
     public interface IShowRepository
     {
-        IEnumerable<Show> GetCurrentShows();
+        IEnumerable<Show> GetCurrentShows(int archive);
 
-        Show GetShowById(int id);
+        Show GetShowById(int id, int archive);
     }
 }

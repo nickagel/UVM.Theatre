@@ -14,12 +14,22 @@ namespace UVM.Theatre.Services
 
         public IEnumerable<Show> GetAllActiveShows()
         {
-            return _showRepository.GetCurrentShows();
+            return _showRepository.GetCurrentShows(0);
         }
 
         public Show GetShowById(int id)
         {
-            return _showRepository.GetShowById(id);
+            return _showRepository.GetShowById(id, 0);
+        }
+
+        public IEnumerable<Show> GetAllArchivedShows()
+        {
+            return _showRepository.GetCurrentShows(1);
+        }
+
+        public Show GetArchivedShowById(int id)
+        {
+            return _showRepository.GetShowById(id, 1);
         }
 
     }

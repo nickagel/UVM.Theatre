@@ -8,7 +8,7 @@ namespace UVM.Theatre.Repositories
 {
     public class ShowRepository : IShowRepository
     {
-        public IEnumerable<Show> GetCurrentShows()
+        public IEnumerable<Show> GetCurrentShows(int archive)
         {
             const string connStr = "server=localhost;user=root;database=theatre;port=3306;password=abc123;";
             var conn = new MySqlConnection(connStr);
@@ -17,7 +17,7 @@ namespace UVM.Theatre.Repositories
             {
                 conn.Open();
 
-                const string sql = "SELECT * FROM theatre.show where archive = 0;";
+                var sql = "SELECT showId, title, subTitle, director, showDate, description, imageUrl, archive FROM theatre.show where archive = " + archive + ";";
                 var cmd = new MySqlCommand(sql, conn);
                 var rdr = cmd.ExecuteReader();
 
@@ -46,7 +46,7 @@ namespace UVM.Theatre.Repositories
             return shows;
         }
 
-        public Show GetShowById(int id)
+        public Show GetShowById(int id, int archive)
         {
             const string connStr = "server=localhost;user=root;database=theatre;port=3306;password=abc123;";
             var conn = new MySqlConnection(connStr);
@@ -55,7 +55,7 @@ namespace UVM.Theatre.Repositories
             {
                 conn.Open();
 
-                var sql = "SELECT * FROM theatre.show WHERE archive = 0 AND showId =" + id + ";";
+                var sql = "SELECT * FROM theatre.show WHERE archive = " +  archive + " AND showId =" + id + ";";
                 var cmd = new MySqlCommand(sql, conn);
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())

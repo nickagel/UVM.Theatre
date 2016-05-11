@@ -231,10 +231,28 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Banner\150929_UVM_39steps__0604.jpg" />
+    <Content Include="Content\Images\Banner\150929_UVM_39steps__8378.jpg" />
+    <Content Include="Content\Images\Banner\150929_UVM_39steps__8852.jpg" />
+    <Content Include="Content\Images\Banner\151103_UVM_MaratSade_Cam2_0789insta.jpg" />
+    <Content Include="Content\Images\Banner\151115_UVM_MaratSade_3050.jpg" />
+    <Content Include="Content\Images\Banner\151115_UVM_MaratSade_3320.jpg" />
+    <Content Include="Content\Images\Banner\160222_UVM_NoisesOff_0058.jpg" />
+    <Content Include="Content\Images\Banner\160222_UVM_NoisesOff_0572.jpg" />
+    <Content Include="Content\Images\Banner\160222_UVM_NoisesOff_2040.jpg" />
+    <Content Include="Content\Images\Shows\Poster\AGrandNightforSinging.jpg" />
     <Content Include="Content\Images\facebook.jpg" />
+    <Content Include="Content\Images\Shows\Poster\HowILearnedtoDrive.jpg" />
     <Content Include="Content\Images\instagram.jpg" />
+    <Content Include="Content\Images\Shows\Poster\LittleWomen.jpg" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Shows\Poster\Mousetrap.jpg" />
+    <Content Include="Content\Images\Shows\Poster\MuchAdoAboutNothing.jpg" />
     <Content Include="Content\Images\nav-icon.png" />
+    <Content Include="Content\Images\Shows\Poster\OurTown.jpg" />
+    <Content Include="Content\Images\Shows\Poster\TheArabianNights.jpg" />
+    <Content Include="Content\Images\Shows\Poster\TheHeidiChronicles.jpg" />
+    <Content Include="Content\Images\Shows\Poster\Urinetown.jpg" />
     <Content Include="Content\slider.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -295,7 +313,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Theatre\Archive.cshtml" />
-    <Content Include="Views\Theatre\index.cshtml" />
+    <Content Include="Views\Theatre\Index.cshtml" />
     <Content Include="Views\Theatre\Location.cshtml" />
     <Content Include="Views\Theatre\Show.cshtml" />
     <Content Include="Views\Theatre\Shows.cshtml" />

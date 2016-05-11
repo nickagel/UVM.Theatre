@@ -7,6 +7,9 @@ namespace UVM.Theatre.Services
     {
         IEnumerable<Show> GetAllActiveShows();
 
+        IEnumerable<Show> GetAllArchivedShows();
         Show GetShowById(int id);
+
+        Show GetArchivedShowById(int id);
     }
 }

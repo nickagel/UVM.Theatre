@@ -38,7 +38,7 @@ namespace UVM.Theatre.Controllers
         public ActionResult Archive()
         {
             ViewBag.Archive = "active";
-            var shows = _showService.GetAllActiveShows();
+            var shows = _showService.GetAllArchivedShows();
             return View(shows);
         }
 
@@ -47,7 +47,7 @@ namespace UVM.Theatre.Controllers
             var url = HttpContext.Request.Url;
             if (url == null) return null;
             var id = Convert.ToInt32(url.Segments[3]);
-            var show = _showService.GetShowById(id);
+            var show = _showService.GetArchivedShowById(id);
             return View(show);
         }
 

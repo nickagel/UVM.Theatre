@@ -27,7 +27,7 @@ namespace UVM.Theatre.Tests.UnitTests.ServiceTests
             //assert
             var shows = GetShows();
             const int showsCount = 4;
-            _showRepositoryMock.Setup(r => r.GetCurrentShows()).Returns(shows);
+            _showRepositoryMock.Setup(r => r.GetCurrentShows(1)).Returns(shows);
 
             //act
             var result = _showService.GetAllActiveShows();

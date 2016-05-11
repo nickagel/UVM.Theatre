@@ -6,15 +6,12 @@
 }
 
 <ul id="archives">
-@while (n++ < 6)
-{
-  
-     foreach (var show in @Model)
+@foreach (var show in @Model)
      {
        <li class="archive">
-           <a href='@($"/Theatre/ArhivedShow/{@show.ShowId}")'><img class="border" src="@show.Image"/></a>
+           <a href='@($"/Theatre/ArhivedShow/{@show.ShowId}")'><img alt="@show.Title" class="border" src='@($"./../../Content/Images/Shows/Poster/{@show.Image}")'/></a>
          
        </li>
      }
-}
+
 </ul>
