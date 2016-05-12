@@ -13,6 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UVM.Theatre.Services", "UVM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UVM.Theatre.Tests", "UVM.Theatre.Tests\UVM.Theatre.Tests.csproj", "{16392354-AA42-4C5E-8AFE-8637CE3CA0D1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{CED4CB2A-23F2-415D-9E79-30F3595887F7}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\theatre_banner.sql = ..\..\..\..\Desktop\theatre_banner.sql
+		..\..\..\..\Desktop\theatre_location.sql = ..\..\..\..\Desktop\theatre_location.sql
+		..\..\..\..\Desktop\theatre_show.sql = ..\..\..\..\Desktop\theatre_show.sql
+		..\..\..\..\Desktop\theatre_showdate.sql = ..\..\..\..\Desktop\theatre_showdate.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
