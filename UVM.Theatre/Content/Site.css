@@ -10,6 +10,9 @@ body {
     -o-min-width: 400px;
     -webkit-min-width: 400px;
     min-width: 400px;
+    text-align: justify;
+    -ms-text-justify: inter-word;
+    text-justify: inter-word;
 }
 
 a:hover, a:active, a:focus, a{
