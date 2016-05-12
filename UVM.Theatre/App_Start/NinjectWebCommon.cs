@@ -65,11 +65,11 @@ namespace UVM.Theatre
             if (kernel == null) throw new ArgumentNullException(nameof(kernel));
             kernel.Bind<ILocationsRepository>().To<LocationsRepository>();
             kernel.Bind<IShowRepository>().To<ShowRepository>();
-
+            kernel.Bind<IBannerRepository>().To<BannerRepository>();
 
             kernel.Bind<IShowService>().To<ShowService>();
             kernel.Bind<ILocationsService>().To<LocationsService>();
-
+            kernel.Bind<IBannerService>().To<BannerService>();
             kernel.Bind<IOrderProcessorService>().To<OrderProcessorService.EmailOrderProcessor>();
         }        
     }

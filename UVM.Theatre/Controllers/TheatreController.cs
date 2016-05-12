@@ -10,15 +10,19 @@ namespace UVM.Theatre.Controllers
 
         private readonly ILocationsService _locationsService;
 
-        public TheatreController(IShowService showService, ILocationsService locationsService)
+        private readonly IBannerService _bannerService;
+
+        public TheatreController(IShowService showService, ILocationsService locationsService, IBannerService bannerService)
         {
             _showService = showService;
             _locationsService = locationsService;
+            _bannerService = bannerService;
         }
        
         public ActionResult Index()
         {
-            return View();
+            var banners = _bannerService.GetBanners();
+            return View(banners);
         }
 
         public ActionResult Shows()

@@ -1,20 +1,16 @@
-﻿
+﻿@model IEnumerable<UVM.Theatre.Domain.Models.Banner>
 @{
     ViewBag.Title = "Home";
 }
-
 <section>
     <ul class="slider">
-        <li><img src="../../Content/Images/Banner/150929_UVM_39steps__0604.jpg" /></li>
-        <li><img src="../../Content/Images/Banner/150929_UVM_39steps__8378.jpg"/></li>
-        <li><img src="../../Content/Images/Banner/150929_UVM_39steps__8852.jpg"/></li>
-        <li><img src="../../Content/Images/Banner/151103_UVM_MaratSade_Cam2_0789insta.jpg"/></li>
-        <li><img src="../../Content/Images/Banner/151115_UVM_MaratSade_3050.jpg"/></li>
-        <li><img src="../../Content/Images/Banner/151115_UVM_MaratSade_3320.jpg"/></li>
-        <li><img src="../../Content/Images/Banner/160222_UVM_NoisesOff_0058.jpg"/></li>
-        <li><img src="../../Content/Images/Banner/160222_UVM_NoisesOff_2040.jpg"/></li>
-        <li><img src="../../Content/Images/Banner/160222_UVM_NoisesOff_0572.jpg"/></li>
+
+        @foreach (var banner in @Model)
+        {
+            <li><img src='@($"./../../Content/Images/Banner/{banner.Url}")' alt="@banner.Id"></li>
+        }
     </ul>
+    
 
     <ol class="mini border">
         <li><img class="img" src="http://nagel.w3.uvm.edu/theatre/imgs/miniIndex.png"></li>
@@ -24,7 +20,7 @@
     </ol>
 </section>
 <script>
-  $(document).ready(function () {
-    $('.slider').bxSlider();
-  });
+    $(document).ready(function () {
+        $('.slider').bxSlider();
+    });
 </script>

@@ -115,6 +115,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BannerService.cs" />
+    <Compile Include="IBannerService.cs" />
     <Compile Include="ILocationsService.cs" />
     <Compile Include="IOrderProcessorService.cs" />
     <Compile Include="LocationsService.cs" />

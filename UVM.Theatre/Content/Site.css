@@ -10,6 +10,9 @@ body {
     -o-min-width: 400px;
     -webkit-min-width: 400px;
     min-width: 400px;
+}
+
+p {
     text-align: justify;
     -ms-text-justify: inter-word;
     text-justify: inter-word;
@@ -71,14 +74,16 @@ footer {
 
 #follow {
     float: right;
+    padding: 16px;
+    text-align: center;
 }
 
 #ig img{
-  width: 150px;
+  width: 46px;
 }
 
 #fb img{
-  width:165px;
+  width:50px;
 }
 
 #follow{
@@ -190,15 +195,15 @@ a.button {
   text-decoration: none;
   background-color: #699E87;
   padding:5px 20px;
-  /*bottom: 10px;
-  left: 75%;
-  position: absolute;*/
   font-weight: bold;
-    -webkit-box-shadow: 0 0 5px #72AC93;
-    -ms-box-shadow: 0 0 5px #72AC93;
-    box-shadow: 0 0 5px #72AC93;
+  -webkit-box-shadow: 0 0 5px #72AC93;
+  -ms-box-shadow: 0 0 5px #72AC93;
+  box-shadow: 0 0 5px #72AC93;
   border: 3px solid #72AC93;
   font-size: 20px;
+  position: absolute;
+  bottom: 2%;
+  left: 69%;
 }
 
 a.button:hover{
@@ -218,6 +223,10 @@ a.button:hover{
   width: 50%;
   float: left;
   padding: 10px
+}
+
+#shows p {
+    padding-bottom: 35px;
 }
 
 @media screen and (max-width: 1199px) {
